@@ -1,0 +1,15 @@
+{% extends "nav.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+
+<div class="container-fluid no-padding">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Process Flow</h2>
+        <img src="{{ url_for('static', filename=image_name) }}" alt="" class="img-responsive" />
+      </div>
+    </div>
+  </div>
+
+ 
+{% endblock %}

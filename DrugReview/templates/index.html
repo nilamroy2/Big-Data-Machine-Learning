@@ -1,0 +1,97 @@
+{% extends "nav.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+
+<!-- Content section -->
+<div class=" container-fluid jumbotron">
+    <div class="container-fluid row border border-success">
+        <div class="col-md-6 img-responsive font-weight-bold">
+            <h2>USA - Drug Review Data Analysis and Sentment Prediction</h2>
+            <hr>
+            <img class="img-fluid float-left" src=" {{ url_for('static', filename='img/drugs.jpg') }}" width="250" height="250">
+            <br>
+            <p><strong>About this project!</strong></h3>
+               <br>
+              <p class="text-justify">
+                Given the importance of proper drugs to cure health conditions, our team has developed a application using machine learning and  natural language processing in an attempt to identify sentiment from the review and rating provided by the user for various drugs.
+                This application, also enables anyone visiting our website to find out top medicines used for various health conditions, based on the collected drug review data, using visualizations and interactive charts along with many anaswers to many other questions you may have....
+              </p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <h5 class="font-weight-bold text-info">Team members: Nilam Roy and Indu</h5> 
+            <br>
+          </div>
+      <div class="col-md-6  font-weight-bold">
+          <h2>Analysis</h2>
+<!-- beginning of carousal -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <a href="/"><img src="{{ url_for('static', filename='img/dash.gif') }}" class="d-block w-100" alt="..."></a>
+        
+          <h5>A Dashboard for Drug stats</h5>
+        <p>In this dashboard, we get to view the top and bottom 10 health  conditions and top and bottom 10 drugs used by patients.</p>
+      </div>
+      <div class="carousel-item">
+          <a href="/"><img src="{{ url_for('static', filename='img/allDrugs.gif') }}" class="d-block w-100" alt="..."></a>
+        
+          <h5>All drugs with their conditions</h5>
+          <p>Here you can get a peek into various drugs and the health conditions they are used for in a single plot.</p>
+      </div>
+      <div class="carousel-item">
+        <a href="/"><img src="{{ url_for('static', filename='img/ratingDist.gif') }}" class="d-block w-100" alt="..."></a>
+        <h5>Distribution of user rating</h5>
+      
+        <p>You can view the distribution of user review rating. Overall, are people satisfied with the drugs?</p>
+      </div>
+      <div class="carousel-item">
+        <a href="/"><img src="{{ url_for('static', filename='img/reviewLength.gif') }}" class="d-block w-100" alt="..."></a>
+      
+        <h5>Review Length Vs Useful Count</h5>
+        <p>Is there any correlation between review length and usefulCount?We get to find out how others perceive usefulness in length of a review.</p>
+      </div>
+      <div class="carousel-item">
+            <a href="/"><img src="{{ url_for('static', filename='img/yearlyDrug.gif') }}" class="d-block w-100" alt="..."></a>
+          
+            <h5>Yearly trend in Drug Reviews</h5>
+        <p>Do we see any yearly trend in number of drug reviews from 2008-2017?</p>
+      </div>
+      <div class="carousel-item">
+                <!-- <a href="/"><img src="{{ url_for('static', filename='img/confusion.png') }}" class="d-block w-100" alt="..."></a> -->
+                <a href="/"><img src="{{ url_for('static', filename='img/alt_cm.png') }}" class="d-block w-100" alt="..."></a>
+                <h5>Confusion Matrix</h5>
+        <p>How do we we verify the accuracy of our model for various classes? What's the precision and recall values?</p>
+      </div>
+      <div class="carousel-item">
+        <!-- <a href="/"><img src="{{ url_for('static', filename='img/word_cloud_happy.png') }}" class="d-block w-100" alt="..."></a> -->
+        <a href="/"><img src="{{ url_for('static', filename='img/wc_happy.png') }}" class="d-block w-100" alt="..."></a>
+        
+        <h5>Word Cloud - Happy</h5>
+        <p>A cloud of all lexicons from drug reviews with positive sentiments.</p>
+      </div>
+      <div class="carousel-item">
+        <a href="/"><img src="{{ url_for('static', filename='img/wc_sad.png') }}" class="d-block w-100" alt="..."></a>
+        
+        <h5>Word Cloud - Sad</h5>
+        <p text-info>A cloud of all lexicons from drug reviews with negative sentiments.</p>
+      </div>
+    </div>
+</div>
+
+  <!-- end of carousal   -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+<!-- Styles -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+{% endblock %}

@@ -1,0 +1,1 @@
+select * from drug_review_data;

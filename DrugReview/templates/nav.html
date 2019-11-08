@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+      <!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+      <!-- <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-w+8Gqjk9Cuo6XH9HKHG5t5I1VR4YBNdPt/29vwgfZR485eoEJZ8rJRbm3TR32P6k" crossorigin="anonymous"> -->
+      <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp" crossorigin="anonymous">
+      <!-- custom style css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-style.css') }}">
+
+    <title>Drug review Analysis</title>
+  </head>
+  <body>
+	  <div class="container-fluid">
+	  <!-----Code for nav bar-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="nav">
+				<a class="navbar-brand" href="/"><strong>Drug Review Analysis</strong></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				  <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+             <a class="nav-link active" href="/form">Predict</a><span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link active" href="/process">Methodology<span class="sr-only"></span></a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link active" href="/ml_process">Process Flow<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/data">Dataset<span class="sr-only"></span></a>
+          </li>
+
+
+          <li class="nav-item">
+              <a class="nav-link active" href="https://public.tableau.com/profile/indu.chandrasekharan#!/vizhome/drug_analysis/DrugReviewsAnalysis?publish=yes">Visualization</a><span class="sr-only"></span></a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link active" href="/api/v1.0">API</a><span class="sr-only"></span></a>
+          </li>
+				
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              References
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="https://github.com/ic2019/group_project3">Github</a>
+                  <a class="dropdown-item" href="https://github.com/ic2019/group_project3/blob/master/README.md">Documentation</a>
+                  <a class="dropdown-item" href="https://archive.ics.uci.edu/ml/datasets/Drug+Review+Dataset+%28Drugs.com%29">UCI M/L</a>
+                  <a class="dropdown-item" href="https://www.drugs.com/">Drugs.com</a>
+              </div>
+
+          </li>
+				  </ul>
+				</div>
+			  </nav>
+        <!----End of code for nav bar-->
+        <!-----------Start of Jumbotron-->
+        <div class="container">
+            <!-- <div class="container row"> -->
+              <h3 class="text-center">USA - Drug Review Analysis</h3>
+              <!-- <div class="col-md-12 img-responsive"> -->
+ 
+                   
+              <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="container jumbotron"> -->
+              <section class="section">
+                <h5 class="title text-center">
+                  {% block title %}{% endblock %}
+
+                </h5>
+                  
+                  {% block body %}{% endblock %}
+
+              </section> 
+            <!-- </div> -->
+        </div>
+        <div class="footer">
+          {% block footer %}
+                <!-- Footer section -->  
+                <footer class="page-footer font-small blue">
+            <div class="footer-copyright text-center py-3">© Copyright  2019</div>
+
+        </footer>
+        {% endblock %}
+      </div>
+    <!--  JavaScript Libraries -->
+  <!-- Required meta tags -->
+   <!--  JavaScript Libraries -->
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
+

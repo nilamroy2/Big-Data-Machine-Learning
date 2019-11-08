@@ -1,0 +1,48 @@
+{% extends "nav.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+<!-- <html> -->
+<!-- <head> -->
+	<!-- <title>Home</title> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-style.css') }}"> -->
+<!-- </head> -->
+<!-- <body> -->
+<!-- Content section -->
+<div class="jumbotron container">
+    <div class="container">
+
+        <header>
+            <div class="container">
+
+            <h2>Sentimental Analysis and classification for Drug Reviews</h2>
+            
+            </div>
+        </header>
+    
+        <div class="container">
+        <!-- Beginning of the user input form -->
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Your Review Here</p>
+            
+            <textarea name="message" rows="3" cols="150"></textarea>
+            <br/>
+    
+            <input type="submit" class="btn-info" value="Predict">
+            
+        </form>
+            
+        </div>
+
+</div>
+
+</div>
+<!-- </body> -->
+<!-- </html> -->
+
+<!-- Styles -->
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+{% endblock %}

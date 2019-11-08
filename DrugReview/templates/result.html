@@ -1,0 +1,45 @@
+{% extends "nav.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+<!-- <html> -->
+<!-- <head> -->
+	<!-- <title></title> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<!-- </head> -->
+<!-- <body> -->
+		<div class="container predict text-blue">
+			<div class="row">
+						
+			</div>
+			<div class="card text-center ">
+				<div class="card-body">
+				  <h5 class="card-title">Prediction Results</h5>
+				  <p class="card-text">Sentiment analysis and classification</p>
+				  
+				</div>
+				<div class="card-footer text-center predict">
+					{% if prediction == 1 %}
+					<div class="row text-success">
+						<h5>Prediction 1</h5>
+						<span style='font-size:100px;'>&#128522;</span>
+						<p>I am satisfied &#128522;</p>
+	
+					</div>
+					{% elif prediction == 0 %}
+					<div class="row text-danger">
+							<h5>Prediction 0</h5>
+							<span style='font-size:100px;'>&#128542;</span>
+                             <p>I am not satisfied &#128542;</p>
+						
+					</div>
+					
+					{% endif %}
+
+				</div>
+			  </div>
+		
+		</div>
+<!-- </body> -->
+<!-- </html> -->
+    
+{% endblock %}
